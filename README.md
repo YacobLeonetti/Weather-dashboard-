@@ -1,4 +1,3 @@
-# Weather-dashboard-
 
 # Weather Dashboard
 
