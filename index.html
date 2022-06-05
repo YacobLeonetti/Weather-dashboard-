@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <header class="bg-success bg-gradient">
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <main class="m-1 p-1">
+
+        <div class="row">
+            
+            <!-- left column -->
+            <div class="col-12 col-md-3 d-flex flex-column p-4"></div>
+                <!-- city search form -->
+                <div class="city-search border-bottom border-success border-5 mb-1">
+                    <h2>Enter City:</h2>
+                    <form id="city-form">
+                        <div class="mb-3">
+                            <input
+                            id="city"
+                            type="text"
+                            autofocus="true"
+                            class="form-control form-control-lg"
+                            />
+                        </div>
+                    </form>
+                    <!-- form submission -->
+                    <div class="d-grid gap-5 mb-3">
+                        <button type="submit" class="btn btn-primary" id="search">
+                        Search
+                        </button>
+                    </div>
+                </div>
+                <!-- saved searches -->
+                <div id="saved-cities" class="d-grid gap-3 mb-1"></div>
+            </div>
+            <!-- right column -->
+            <div id="weather-container" class="d-grid gap-3 mb-1">
+                <!-- current weather -->
+                <div id="current-weather" class="p-3">
+                    <h2 id="current-weather-title"></h2>
+                    <div id="current-data">
+                      <p class="text-body" id="current-weather-temp"></p>
+                      <p class="mt-4 text-body" id="current-weather-wind"></p>
+                      <p class="mt-4 text-body" id="current-weather-humidity"></p>
+                        <section id="uvIndex">
+                          <p class="mt-4 text-body" id="current-weather-uvi"></p>
+                        </section>
+                    </div>
+                </div>
+                <!-- forecast -->
+                <div id="5-day-forecast">
+                    <h3 id="forecast-title"></h3>
+                    <div class="row justify-content-between" id="forecast"></div>
+                </div>
+                
+            </div>
+        </div>
+
+    </main>
+    <!-- jquery dayjs and script.js src tags -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.3/dayjs.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
